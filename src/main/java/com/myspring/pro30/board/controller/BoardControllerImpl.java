@@ -118,7 +118,7 @@ public class BoardControllerImpl implements BoardController {
 					}
 				}
 				mFile.transferTo(new File(ARTICLE_IMAGE_REPO+"/"+imageFileName));
-			} 
+			}  
 		}
 		return imageFileName;
 	}
