@@ -99,7 +99,7 @@ public class BoardControllerImpl implements BoardController {
 	private ModelAndView form(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		String viewName = (String) request.getAttribute("viewName");
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName(viewName); 
+		mav.setViewName(viewName);  
 		return mav;
 	}
 
