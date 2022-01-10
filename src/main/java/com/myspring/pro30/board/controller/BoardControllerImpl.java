@@ -94,7 +94,7 @@ public class BoardControllerImpl implements BoardController {
 		}
 		return resEnt;
 	}
-	
+	 
 	@RequestMapping(value = "/board/*Form.do", method = RequestMethod.GET)
 	private ModelAndView form(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		String viewName = (String) request.getAttribute("viewName");
