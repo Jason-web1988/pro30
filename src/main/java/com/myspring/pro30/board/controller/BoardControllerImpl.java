@@ -213,7 +213,7 @@ public class BoardControllerImpl implements BoardController {
 			message +="</script>";
 		}catch (Exception e) {
 			e.printStackTrace();
-			 
+			  
 			message = "<script>";
 			message += " alert('오류가 발생했습니다. 다시 수정해주세요.');";
 			message +=" location.href='" + multipartRequest.getContextPath()+"/board/viewArticle.do?articleNO="+articleNO+"';";
