@@ -85,11 +85,12 @@ public class BoardControllerImpl implements BoardController {
 			resEnt = new ResponseEntity(message, responseHeaders, HttpStatus.CREATED);
 		}catch (Exception e) {
 			e.printStackTrace();
-			File srcFile = new File(ARTICLE_IMAGE_REPO+"/"+"temp"+"/"+imageFileName);
+			File srcFile = new File(ARTICLE_IMAGE_REPO+"/"+imageFileName);
 			srcFile.delete();
 			message =" <script>";
 			message += " alert('오류가 발생했습니다. 다시 시도해 주세요.');";
 			message +=" location.href='"+ multipartRequest.getContextPath()+"/board/articleForm.do"+ "';";
+			message += "</script>";
 			resEnt = new ResponseEntity(message, responseHeaders, HttpStatus.CREATED);
 		}
 		return resEnt;
