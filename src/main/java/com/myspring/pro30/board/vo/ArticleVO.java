@@ -4,7 +4,7 @@ import java.sql.Date;
 
 import org.springframework.stereotype.Component;
 
-@Component("articleNO")
+@Component("articleVO")
 public class ArticleVO {
 	private int level;
 	private int articleNO;

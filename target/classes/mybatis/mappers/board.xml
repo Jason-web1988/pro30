@@ -36,4 +36,31 @@
 			SELECT  nvl(max(articleNO), 0) + 1 from t_board
 		]]>
 	</select>
+	<select id="selectArticle" resultMap="articleResult" parameterType="int">
+		<![CDATA[
+			SELECT * FROM t_board
+			WHERE articleNO = #{articleNO}
+		]]>
+	</select>
+	
+	<update id="updateArticle" parameterType="java.util.Map">
+		UPDATE t_board
+		SET title=#{title}, content=#{content}
+		
+		<if test="imageFileName !='' and imageFileName != null ">
+			, imageFileName = #{imageFileName}
+		</if>
+		
+		WHERE articleNO=#{articleNO}
+	</update>
+	
+	<delete id="deleteArticle" parameterType="int">
+		<![CDATA[
+			DELETE FROM t_board
+			WHERE articleNO in (
+				SELECT articleNO FROM t_board
+				START WITH articleNO = #{articleNO}
+				CONNECT BY PRIOR articleNO = parentNO)
+		]]>
+	</delete>
 </mapper>
