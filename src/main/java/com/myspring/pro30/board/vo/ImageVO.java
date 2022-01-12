@@ -30,7 +30,7 @@ public class ImageVO {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-	}
+	} 
 	
 	public Date getRegDate() {
 		return regDate;
