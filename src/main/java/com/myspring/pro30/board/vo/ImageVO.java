@@ -14,7 +14,7 @@ public class ImageVO {
 	private int articleNO;
 	
 	public int getImageFileNO() {
-		return imageFileNO;
+		return imageFileNO; 
 	}
 	public void setImageFileNO(int imageFileNO) {
 		this.imageFileNO = imageFileNO;
