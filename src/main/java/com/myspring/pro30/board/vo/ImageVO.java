@@ -33,7 +33,7 @@ public class ImageVO {
 	}
 	
 	public Date getRegDate() {
-		return regDate;
+		return regDate; 
 	}
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
