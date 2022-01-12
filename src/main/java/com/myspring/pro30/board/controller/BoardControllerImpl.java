@@ -46,7 +46,7 @@ public class BoardControllerImpl implements BoardController {
 		List articlesList = boardService.articlesList();
 		ModelAndView mav = new ModelAndView(viewName);
 		mav.addObject("articlesList", articlesList);
-		return mav;
+		return mav; 
 	}
 /*
 	@Override
