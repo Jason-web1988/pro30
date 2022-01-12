@@ -7,7 +7,7 @@ import java.sql.Date;
 import org.springframework.stereotype.Component;
 
 @Component("imageVO")
-public class ImageVO {
+public class ImageVO { 
 	private int imageFileNO;
 	private String imageFileName;
 	private Date regDate;
