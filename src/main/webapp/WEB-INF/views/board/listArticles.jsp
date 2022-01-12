@@ -80,6 +80,6 @@
 <%-- 	<a class="cls1" href="${contextPath}/board/articleForm.do">
 		
 	</a> --%>
-	<a class="cls1" href="javascript:fn_articleForm('${isLogOn}', '${contextPath }/board/articleForm.do','${contextPath }/member/loginForm.do')"><p class="cls2">글쓰기</p></a>
+	<a class="cls1" href="javascript:fn_articleForm('${isLogOn}', '${contextPath}/board/articleForm.do','${contextPath}/member/loginForm.do')"><p class="cls2">글쓰기</p></a>
 </body>
 </html>

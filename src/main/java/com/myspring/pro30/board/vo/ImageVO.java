@@ -4,6 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.sql.Date;
 
+import org.springframework.stereotype.Component;
+
+@Component("imageVO")
 public class ImageVO {
 	private int imageFileNO;
 	private String imageFileName;

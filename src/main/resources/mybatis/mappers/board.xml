@@ -30,13 +30,15 @@
 		]]>
 	</select>
 	
-	<insert id="insertNewArticle" parameterType="java.util.Map">
+	<!-- 단일이미지 -->
+	
+	<!-- <insert id="insertNewArticle" parameterType="java.util.Map">
 		<![CDATA[
 			INSERT into t_board(articleNO,  title, content, imageFileName, id)
 			VALUES(#{articleNO},#{title},	#{content}, #{imageFileName},	#{id})
 		]]>
 	</insert>
-	
+	 -->
 	<select id="selectNewArticleNO" resultType="int">
 		<![CDATA[
 			SELECT  nvl(max(articleNO), 0) + 1 from t_board
@@ -70,6 +72,7 @@
 		]]>
 	</delete>
 	
+	<!-- 다중이미지 -->
 	<insert id="insertNewArticle" parameterType="java.util.Map">
 		<![CDATA[
 			INSERT INTO t_board(articleNO, id, title, content, imageFileName)
@@ -84,16 +87,16 @@
 		</foreach>
 	</insert>
 	
-	<select id="selectNewImageFIleNO" resultType="int">
+	<select id="selectNewImageFileNO" resultType="int">
 		<![CDATA[
-			SELECT nvl(max(imageFileNO), 0) from t_imageFile
+			SELECT nvl(max(imageFileNO),0) from t_imageFile	
 		]]>
 	</select>
 	
 	<select id="selectImageFileList" resultMap="imgResult" parameterType="int">
 		<![CDATA[
 			SELECT * FROM t_imageFile
-			where articleNO = ${articleNO}
+			where articleNO=#{articleNO}
 		]]>
 	</select>
 </mapper>

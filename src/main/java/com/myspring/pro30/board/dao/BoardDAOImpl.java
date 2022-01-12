@@ -66,8 +66,10 @@ public class BoardDAOImpl implements BoardDAO {
 		return sqlSession.selectOne("mapper.board.selectNewImageFileNO");
 	}
 
+
 	@Override
 	public List selectImageFileList(int articleNO) throws DataAccessException {
+		System.out.println("articleNO >>> " + articleNO);
 		List<ImageVO> imageFileList = null;
 		imageFileList = sqlSession.selectList("mapper.board.selectImageFileList",articleNO);
 		return imageFileList;

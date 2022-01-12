@@ -282,7 +282,14 @@ public class BoardControllerImpl implements BoardController {
 		return resEnt;
 	}
 
-	
+	@RequestMapping(value = "/board/*Form.do", method =  RequestMethod.GET)
+	private ModelAndView form(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String viewName = (String)request.getAttribute("viewName");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName(viewName);
+		return mav;
+	}
+
 	
 	/*
 	//한개 이미지 upload()
@@ -326,3 +333,5 @@ public class BoardControllerImpl implements BoardController {
 		return fileList;
 	}
 }
+
+
